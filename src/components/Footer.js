@@ -18,7 +18,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="right">
-                <p>Placeholder for cool quote</p>
+                <p></p>
                 <div className="social">
                 <a href="https://www.linkedin.com/in/colette-delizo-478521117/"><FaLinkedin size={30} style={{color:"#fff", marginRight: "1rem" }}/></a>
                 <a href="https://github.com/delizoc"><FaGithub size={30} style={{color:"#fff", marginRight: "1rem" }}/></a>

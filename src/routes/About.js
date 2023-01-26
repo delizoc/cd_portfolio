@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div>
       <Navbar />
-      <PagesImg heading="ABOUT." text="Sorry for the delayed response. I'm probably off skiing." image = {image}/>
+      <PagesImg heading="ABOUT." text="I'm probably skiing." image = {image}/>
       <AboutContent />
       <Footer />
     </div>

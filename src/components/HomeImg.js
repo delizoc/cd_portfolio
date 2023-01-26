@@ -11,7 +11,7 @@ const HomeImg = () => {
             <img className="intro-img" src={IntroImg} alt="IntroImg" />
         </div>
         <div className="content">
-            <h1>Hi, My name is Colette.</h1>
+            <h1>Hi! My name is Colette.</h1>
             <p>I'm a recent CS graduate && full stack developer.
             {/* <span class="txt-rotate" data-rotate="[ &quot;a Fullstack Developer&quot;, &quot;a Cancer Researcher&quot;, &quot;a recent CS graduate&quot; ]"></span> */}
             </p>
