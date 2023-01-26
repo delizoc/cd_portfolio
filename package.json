@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://delizoc.github.io",
+  "homepage": "https://delizoc.github.io/MY-APP",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
