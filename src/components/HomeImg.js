@@ -1,29 +1,57 @@
 import "./HomeImgStyles.css";
-import React from 'react'
+import React, {useState, useEffect} from 'react';
+import ProfileCard from "./ProfileCard";
 
-import IntroImg from "../assets/intro-img.png";
-import { Link } from "react-router-dom";
 
-const HomeImg = () => {
-  return (
-    <div className="hero">
-        <div className="mask">
-            <img className="intro-img" src={IntroImg} alt="IntroImg" />
-        </div>
-        <div className="content">
-            <h1>Hi! My name is Colette.</h1>
-            <p>I'm a recent CS graduate && full stack developer.
-            {/* <span class="txt-rotate" data-rotate="[ &quot;a Fullstack Developer&quot;, &quot;a Cancer Researcher&quot;, &quot;a recent CS graduate&quot; ]"></span> */}
-            </p>
-            <h1>Welcome.</h1>
-            <div>
-                <Link to="/project" className="btn">Projects</Link>
-                <Link to="/contact" className="btn btn-light">Contact</Link>
-            </div>
-        </div>
-    </div>
+export default function HomeImg(){
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [index, setIndex] = useState(1);
+  const toRotate = [
+    "Fullstack Developer",
+    "Cancer Researcher",
+    "Recent CS Grad",
+  ];
+  const period = 2000;
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    } ,delta);
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text]);
+
+  const tick = () => {
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
+    let updatedText = isDeleting ? fullText.substring(0, text.length -1) : fullText.substring(0, text.length + 1);
+    setText(updatedText);
     
+    if (isDeleting){
+      setDelta((prevDelta) => prevDelta / 2);
+    }
+    
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setIndex((prevIndex) => prevIndex -1);
+      setDelta(period);
+    } else if (isDeleting && updatedText === "") {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
+      setIndex(1);
+      setDelta(500);
+    } else {
+      setIndex((prevIndex) => prevIndex + 1);
+    }
+  };
+
+  return (
+    <div className="wrapper">
+      <ProfileCard text={text}/>
+    </div> 
   )
 }
-
-export default HomeImg
