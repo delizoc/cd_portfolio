@@ -8,6 +8,7 @@ export default function HomeImg(){
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
+  // eslint-disable-next-line
   const [index, setIndex] = useState(1);
   const toRotate = [
     "Fullstack Developer",
@@ -22,6 +23,7 @@ export default function HomeImg(){
     } ,delta);
     return () => {
       clearInterval(ticker);
+    // eslint-disable-next-line
     };
   }, [text]);
 

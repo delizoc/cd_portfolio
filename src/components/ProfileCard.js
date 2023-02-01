@@ -22,6 +22,7 @@ function ProfileCard({text, onClick}){
                 <span className="wrap">{text}</span>
               </span>
             </p>
+            <h1> </h1>
             <div>
                 <Link to="/project" className="btn">Projects</Link>
                 <Link to="/contact" className="btn btn-light">Contact</Link>
