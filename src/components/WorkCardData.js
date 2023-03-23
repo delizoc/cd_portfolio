@@ -5,7 +5,7 @@ import pro3 from "../assets/journal.gif";
 const ProjectCardData = [
     {
         imgsrc: pro1,
-        title: "Wasteagram",
+        title: "Wasteagram App",
         text: "The project assignment required the creation of a mobile app called \"Wasteagram\" to allow food service workers to document food waste at the end of each day. We were required to use the Flutter SDK. The app allows for taking or uploading a photo of wasted food and inputting the quantity of food wasted. The current date and device location are also captured with the new post. A main \"list screen\" then shows all posts, allowing users to tap on any post to see more information. Data is stored in Google Firebase Cloud Firestore, and images are stored in Google Firebase Cloud Storage.",
         view: "https://youtu.be/zudr9gFFxAA",
         tags: "Dart/Flutter, Firebase, AndroidSDK",
@@ -21,7 +21,7 @@ const ProjectCardData = [
     },
     {
         imgsrc: pro3,
-        title: "Journal",
+        title: "Journal App",
         text: "App that enables a user to view existing journal entries in a list, view a single journal entry, and add a new journal entry. In addition, the user can change the application theme from light to dark. The theme preferences and journal data should persist between application restarts. Lastly, the app is adaptive, based on the amount of horizontal space available on the screen.",
         tags: "Dart/Flutter, AndroidSDK",
         view: "https://www.youtube.com/watch?v=Sh4uV5gWRfk",
