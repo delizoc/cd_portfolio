@@ -24,7 +24,7 @@ const ProjectCardData = [
         title: "Journal",
         text: "App that enables a user to view existing journal entries in a list, view a single journal entry, and add a new journal entry. In addition, the user can change the application theme from light to dark. The theme preferences and journal data should persist between application restarts. Lastly, the app is adaptive, based on the amount of horizontal space available on the screen.",
         tags: "Dart/Flutter, AndroidSDK",
-        view: "https://youtu.be/VEVv-Faja8s",
+        view: "https://www.youtube.com/watch?v=Sh4uV5gWRfk",
         source: "https://github.com/delizoc/journal"
     },
 ];
